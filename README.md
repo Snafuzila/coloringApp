@@ -1,74 +1,97 @@
-🎨 Color Matching Game (ColoringApp)
+# 🎨 Color Matching Game (ColoringApp)
+
 A fun and simple Java-based color-matching game originally created in 2020. This app challenges players to match colors with illustrated objects, reinforcing quick recognition and memorization.
 
-🧩 Features
-Color-to-image matching mechanics: Users select a color and attempt to match it with the correct area in an image.
+---
 
-GUI using Swing: Interactive interface with clickable buttons and visual feedback.
+## 🧩 Features
 
-Progress tracking: Marks correct and incorrect matches to keep the user informed.
+- **Color-to-image matching mechanics** – Match color tiles with the correct image area.
+- **GUI using Swing** – Built using Java Swing for a lightweight interface.
+- **Progress tracking** – Visual feedback for correct and incorrect attempts.
+- **Easy to customize** – Modify or expand color palettes, logic, and UI elements.
 
-Lightweight and extensible: Designed for easy modification or theme expansion.
+---
 
-📁 Project Structure
-pgsql
-Copy
-Edit
+## 📁 Project Structure
+
+```
+coloringApp/
 ├── app/
-│   ├── src/
-│   │   ├── Main.java           # Entry point, initializes the game window
-│   │   ├── GamePanel.java      # Main game logic and rendering
-│   │   ├── ColorTile.java      # Represents a colored tile user can choose
-│   │   └── TargetImage.java    # Loads image and checks click vs. tile color
-├── build.gradle               # Build configuration
-├── gradle/…                   # Gradle wrapper files
-├── gradlew / gradlew.bat      # Build/run scripts
-└── settings.gradle            # Gradle project settings
-🚀 Getting Started
-Prerequisites
-Java JDK 8 or higher
+│   └── src/
+│       ├── Main.java           # Entry point, sets up game window
+│       ├── GamePanel.java      # Manages game logic and drawing
+│       ├── ColorTile.java      # Handles color tile behavior
+│       └── TargetImage.java    # Manages image logic and click detection
+├── build.gradle                # Gradle build script
+├── gradlew / gradlew.bat       # Gradle wrapper scripts
+├── settings.gradle             # Gradle settings
+└── README.md                   # This file
+```
 
-Gradle (or you can use the provided gradlew wrapper)
+---
 
-Running the Game
-From the project root:
+## 🚀 Getting Started
 
-bash
-Copy
-Edit
+### ✅ Prerequisites
+
+- Java JDK 8 or higher
+- Gradle (or use the included Gradle wrapper)
+
+### ▶️ Run the Game
+
+To run using the Gradle wrapper:
+
+```bash
 ./gradlew run
-This command will compile and launch the game.
+```
 
-🎯 How to Play
-A series of colored tiles appear at the bottom of the window.
+Or, if you have Gradle installed:
 
-The main image on the panel shows areas that need coloring.
+```bash
+gradle run
+```
 
-Select a tile and click on a matching area in the image.
+---
 
-If you're correct, the area highlights; if not, try again.
+## 🎮 How to Play
 
-Continue until all areas are correctly filled.
+1. Colored tiles appear at the bottom of the screen.
+2. A main image is shown with areas to be filled.
+3. Click a tile, then click on a matching area in the image.
+4. Correct matches will fill the image; incorrect ones are ignored.
+5. Complete the image by matching all colors correctly!
 
-🛠 Customization & Extensions
-Add new color palettes: Modify ColorTile.java or resource lists.
+---
 
-Use different images: See how TargetImage.java loads and processes image assets.
+## 🛠 Customization
 
-Add scoring/timer: Extend GamePanel.java to track progress and time.
+You can modify the game logic or assets:
 
-Refactor GUI: Switch from Swing to JavaFX or another toolkit for enhanced visuals.
+- 🎨 **Add new colors** in `ColorTile.java`
+- 🖼️ **Swap out the main image** in `TargetImage.java`
+- 🧠 **Add scoring or timer logic** in `GamePanel.java`
+- 🌈 **Enhance visuals** with animations or switch to JavaFX
 
-🧩 Development Notes
-All classes use Swing components (JFrame, JPanel, etc.).
+---
 
-Coordinates and image masks define clickable areas—check pixel color detection logic in TargetImage.java.
+## 🧠 Developer Notes
 
-You can modify the src/ package structure as you scale the game.
+- Written in pure Java with no external dependencies.
+- Uses `JFrame`, `JPanel`, and Java2D for rendering and input.
+- Color matching is done via pixel comparison logic in `TargetImage.java`.
 
-📜 License
-Distributed under the MIT License. Feel free to fork and enhance!
+---
 
-✉️ Contact
-Created by Snafuzila in 2020. Have questions or feedback? Open an issue or submit a pull request!
+## 📄 License
 
+This project is open-source and available under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙋 Contact
+
+Created by **Snafuzila** in 2020.  
+Questions, suggestions, or improvements?  
+Feel free to [open an issue](https://github.com/Snafuzila/coloringApp/issues) or submit a PR!
